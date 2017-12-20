@@ -159,7 +159,7 @@ limitations under the License.
               throw "No Web Bluetooth support.";
 
             return navigator.bluetooth.requestDevice({
-              filters: [{services: ['13333333333333333333333333333337']}]
+              filters: [{services: ['13333333-3333-3333-3333-333333333337']}]
             })
           })
           .then(logProgress)
@@ -171,9 +171,9 @@ limitations under the License.
             });
           })
           .then(logProgress)
-          .then(server => server.getPrimaryService('13333333333333333333333333333337'))
+          .then(server => server.getPrimaryService('13333333-3333-3333-3333-333333333337'))
           .then(logProgress)
-          .then(service => service.getCharacteristic('13333333333333333333333333330001'))
+          .then(service => service.getCharacteristic('13333333-3333-3333-3333-333333330001'))
           .then(logProgress)
           .then(characteristic => {
             window.deviceName = characteristic;
