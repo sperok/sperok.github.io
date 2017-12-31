@@ -159,7 +159,7 @@ limitations under the License.
               throw "No Web Bluetooth support.";
 
             return navigator.bluetooth.requestDevice({
-              filters: [{services: ['0xfeaa']}]
+              filters: [{services: [0xfeaa]}]
             })
           })
           .then(logProgress)
