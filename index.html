@@ -159,7 +159,7 @@ limitations under the License.
               throw "No Web Bluetooth support.";
 
             return navigator.bluetooth.requestDevice({
-              filters: [{services: ['a52607c1-f6e1-4740-abfd-29639d747e90']}]
+              filters: [{services: ['A52607C1-F6E1-4740-ABFD-29639d747E90']}]
             })
           })
           .then(logProgress)
@@ -171,9 +171,9 @@ limitations under the License.
             });
           })
           .then(logProgress)
-          .then(server => server.getPrimaryService('a52607c1-f6e1-4740-abfd-29639d747e90'))
+          .then(server => server.getPrimaryService('A52607C1-F6E1-4740-ABFD-29639d747E90'))
           .then(logProgress)
-          .then(service => service.getCharacteristic('a52607c1-f6e1-4740-abfd-29639d747e91'))
+          .then(service => service.getCharacteristic('A52607C1-F6E1-4740-ABFD-29639d747E95'))
           .then(logProgress)
           .then(characteristic => {
             window.deviceName = characteristic;
