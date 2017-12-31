@@ -93,7 +93,7 @@ limitations under the License.
 
       <paper-card>
         <div class="card-content">
-          <paper-button id="connectButton" raised class="colorful">Discover Cameras</paper-button>
+          <paper-button id="connectButton" raised class="colorful">Scan for Cameras</paper-button>
         </div>
       </paper-card>
 
@@ -159,7 +159,7 @@ limitations under the License.
               throw "No Web Bluetooth support.";
 
             return navigator.bluetooth.requestDevice({
-              filters: [{services: ['13333333-3333-3333-3333-333333333337']}]
+              filters: [{services: ['a52607c1-f6e1-4740-abfd-29639d747e90']}]
             })
           })
           .then(logProgress)
@@ -171,9 +171,9 @@ limitations under the License.
             });
           })
           .then(logProgress)
-          .then(server => server.getPrimaryService('13333333-3333-3333-3333-333333333337'))
+          .then(server => server.getPrimaryService('a52607c1-f6e1-4740-abfd-29639d747e90'))
           .then(logProgress)
-          .then(service => service.getCharacteristic('13333333-3333-3333-3333-333333330001'))
+          .then(service => service.getCharacteristic('a52607c1-f6e1-4740-abfd-29639d747e91'))
           .then(logProgress)
           .then(characteristic => {
             window.deviceName = characteristic;
